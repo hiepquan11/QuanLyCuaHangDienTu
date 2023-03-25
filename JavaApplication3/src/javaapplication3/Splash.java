@@ -2,7 +2,7 @@
  * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
  * Click nbfs://nbhost/SystemFileSystem/Templates/GUIForms/JFrame.java to edit this template
  */
-package CuaHang;
+package javaapplication3;
 
 /**
  *
@@ -28,8 +28,8 @@ public class Splash extends javax.swing.JFrame {
 
         jPanel1 = new javax.swing.JPanel();
         jLabel1 = new javax.swing.JLabel();
-        jProgressBar1 = new javax.swing.JProgressBar();
-        jLabel2 = new javax.swing.JLabel();
+        myProgressBar = new javax.swing.JProgressBar();
+        Percentage = new javax.swing.JLabel();
         jLabel3 = new javax.swing.JLabel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
@@ -41,9 +41,9 @@ public class Splash extends javax.swing.JFrame {
         jLabel1.setForeground(new java.awt.Color(255, 255, 255));
         jLabel1.setText("Cửa hàng bán đồ điện tử");
 
-        jLabel2.setFont(new java.awt.Font("Times New Roman", 1, 25)); // NOI18N
-        jLabel2.setForeground(new java.awt.Color(255, 255, 255));
-        jLabel2.setText("%");
+        Percentage.setFont(new java.awt.Font("Times New Roman", 1, 25)); // NOI18N
+        Percentage.setForeground(new java.awt.Color(255, 255, 255));
+        Percentage.setText("%");
 
         jLabel3.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Image/logo3.png"))); // NOI18N
         jLabel3.setText("jLabel3");
@@ -52,14 +52,14 @@ public class Splash extends javax.swing.JFrame {
         jPanel1.setLayout(jPanel1Layout);
         jPanel1Layout.setHorizontalGroup(
             jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addComponent(jProgressBar1, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+            .addComponent(myProgressBar, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
             .addGroup(jPanel1Layout.createSequentialGroup()
                 .addGap(170, 170, 170)
                 .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addComponent(jLabel1)
                     .addGroup(jPanel1Layout.createSequentialGroup()
                         .addGap(128, 128, 128)
-                        .addComponent(jLabel2)))
+                        .addComponent(Percentage)))
                 .addContainerGap(193, Short.MAX_VALUE))
             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel1Layout.createSequentialGroup()
                 .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
@@ -74,9 +74,9 @@ public class Splash extends javax.swing.JFrame {
                 .addGap(18, 18, 18)
                 .addComponent(jLabel3, javax.swing.GroupLayout.PREFERRED_SIZE, 165, Short.MAX_VALUE)
                 .addGap(18, 18, 18)
-                .addComponent(jLabel2)
+                .addComponent(Percentage)
                 .addGap(18, 18, 18)
-                .addComponent(jProgressBar1, javax.swing.GroupLayout.PREFERRED_SIZE, 15, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addComponent(myProgressBar, javax.swing.GroupLayout.PREFERRED_SIZE, 15, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addContainerGap())
         );
 
@@ -123,20 +123,42 @@ public class Splash extends javax.swing.JFrame {
             java.util.logging.Logger.getLogger(Splash.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         }
         //</editor-fold>
+        //</editor-fold>
 
         /* Create and display the form */
-        java.awt.EventQueue.invokeLater(new Runnable() {
-            public void run() {
-                new Splash().setVisible(true);
+        Splash Mysplash = new  Splash();
+        Mysplash.setVisible(true);
+        try{
+            for(int i=0;i<=100;i++){
+                Thread.sleep(40);//break 40 milion seconds
+                Mysplash.myProgressBar.setValue(i);
+                Mysplash.Percentage.setText(Integer.toString(i)+"%");
             }
-        });
+            
+                LoginForm supf = new LoginForm();
+                supf.setVisible(true);//visible jfame 
+                supf.pack();
+                supf.setLocationRelativeTo(null);//set position cho jframe
+          
+                supf.setDefaultCloseOperation(EXIT_ON_CLOSE);//ham nay khi dong se tat luon 
+                Mysplash.dispose();
+           
+
+
+        }
+        catch(Exception ex){
+//            new LoginForm().setVisible(true);
+                                
+
+            
+        }
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
+    private javax.swing.JLabel Percentage;
     private javax.swing.JLabel jLabel1;
-    private javax.swing.JLabel jLabel2;
     private javax.swing.JLabel jLabel3;
     private javax.swing.JPanel jPanel1;
-    private javax.swing.JProgressBar jProgressBar1;
+    private javax.swing.JProgressBar myProgressBar;
     // End of variables declaration//GEN-END:variables
 }
