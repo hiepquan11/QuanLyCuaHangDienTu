@@ -10,12 +10,12 @@ import java.awt.Color;
  *
  * @author HUYNH DUC
  */
-public class NhanVien extends javax.swing.JFrame {
+public class MenuEmloyee extends javax.swing.JFrame {
 
     /**
-     * Creates new form NhanVien
+     * Creates new form MenuEmloyee
      */
-    public NhanVien() {
+    public MenuEmloyee() {
         initComponents();
     }
 
@@ -316,7 +316,7 @@ public class NhanVien extends javax.swing.JFrame {
         jPanel3.add(jPanelBills, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 310, 300, 50));
 
         getContentPane().add(jPanel3);
-        jPanel3.setBounds(0, 87, 300, 880);
+        jPanel3.setBounds(0, 87, 300, 830);
 
         jPanel6.setBackground(new java.awt.Color(255, 255, 255));
 
@@ -416,7 +416,7 @@ public class NhanVien extends javax.swing.JFrame {
         jPanel7.add(jPanel8, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, -1, -1));
 
         getContentPane().add(jPanel7);
-        jPanel7.setBounds(300, 90, 920, 870);
+        jPanel7.setBounds(300, 90, 900, 710);
 
         pack();
         setLocationRelativeTo(null);
@@ -424,6 +424,7 @@ public class NhanVien extends javax.swing.JFrame {
 
     private void jPanel1MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jPanel1MouseClicked
         // TODO add your handling code here:
+
     }//GEN-LAST:event_jPanel1MouseClicked
 
     private void jPanelLogoutMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jPanelLogoutMouseClicked
@@ -496,6 +497,7 @@ public class NhanVien extends javax.swing.JFrame {
     private void jPanelProductsMouseEntered(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jPanelProductsMouseEntered
         // TODO add your handling code here:
         jPanelProducts.setBackground(new Color(0,0,0));
+
     }//GEN-LAST:event_jPanelProductsMouseEntered
 
     private void jPanelProductsMouseExited(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jPanelProductsMouseExited
@@ -529,20 +531,20 @@ public class NhanVien extends javax.swing.JFrame {
                 }
             }
         } catch (ClassNotFoundException ex) {
-            java.util.logging.Logger.getLogger(NhanVien.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+            java.util.logging.Logger.getLogger(MenuEmloyee.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         } catch (InstantiationException ex) {
-            java.util.logging.Logger.getLogger(NhanVien.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+            java.util.logging.Logger.getLogger(MenuEmloyee.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         } catch (IllegalAccessException ex) {
-            java.util.logging.Logger.getLogger(NhanVien.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+            java.util.logging.Logger.getLogger(MenuEmloyee.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         } catch (javax.swing.UnsupportedLookAndFeelException ex) {
-            java.util.logging.Logger.getLogger(NhanVien.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+            java.util.logging.Logger.getLogger(MenuEmloyee.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         }
         //</editor-fold>
 
         /* Create and display the form */
         java.awt.EventQueue.invokeLater(new Runnable() {
             public void run() {
-                new NhanVien().setVisible(true);
+                new MenuEmloyee().setVisible(true);
             }
         });
     }

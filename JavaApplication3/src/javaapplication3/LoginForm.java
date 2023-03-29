@@ -104,7 +104,7 @@ public class LoginForm extends javax.swing.JFrame {
         });
 
         jComboBox1.setFont(new java.awt.Font("Segoe UI", 1, 18)); // NOI18N
-        jComboBox1.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Admin", "User" }));
+        jComboBox1.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Admin", "Employee" }));
 
         jLabel3.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Image/User.png"))); // NOI18N
 
@@ -253,8 +253,8 @@ public class LoginForm extends javax.swing.JFrame {
             // TODO add your handling code here:
             
             Class.forName("com.mysql.jdbc.Driver");
-            Connection con = DriverManager.getConnection("jdbc:mysql://localhost/quanliduan", "root", "");
-              ps = con.prepareStatement("SELECT * FROM `account` WHERE `userName`=? AND `Password`=?");
+            Connection con =  DriverManager.getConnection("jdbc:mysql://localhost:3306/quanlyduan", "root", "1234");
+              ps = con.prepareStatement("SELECT * FROM `account` WHERE userName=? AND `Password`=?");
                ps.setString(1, jTextFieldUserName.getText());
                ps.setString(2,String.valueOf(jPasswordFieldLogin.getPassword()));
                rs = ps.executeQuery();

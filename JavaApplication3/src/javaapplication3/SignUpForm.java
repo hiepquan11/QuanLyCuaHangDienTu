@@ -381,7 +381,7 @@ public class SignUpForm extends javax.swing.JFrame {
             // TODO add your handling code here:
             
             Class.forName("com.mysql.jdbc.Driver");
-            Connection con = DriverManager.getConnection("jdbc:mysql://localhost/quanliduan", "root", "");
+            Connection con = DriverManager.getConnection("jdbc:mysql://localhost:3306/quanliduan", "root", "1234");
               ps = con.prepareStatement("SELECT * FROM `account` WHERE `userName`=? OR `Phone`=?");
                ps.setString(1, jTextFieldUserNameSignUp.getText());
                 ps.setString(2, jTextFieldPhone.getText());
@@ -418,7 +418,7 @@ public class SignUpForm extends javax.swing.JFrame {
                 String FullName = jTextFieldFullName.getText();
 
                 Class.forName("com.mysql.jdbc.Driver");
-                 Connection con = DriverManager.getConnection("jdbc:mysql://localhost/quanliduan", "root", ""); 
+                 Connection con = DriverManager.getConnection("jdbc:mysql://localhost:3306/quanliduan", "root", "1234"); 
                  PreparedStatement ps = con.prepareStatement("INSERT INTO `account`(`userName`, `Password`, `Gender`, `Phone`, `FullName`) VALUES (?,?,?,?,?)");
                   //push the data on my database
                  ps.setString(1, userName);

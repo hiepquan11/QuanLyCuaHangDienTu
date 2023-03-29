@@ -4,6 +4,7 @@
  */
 
 package javaapplication3;
+import DBConnection.myConnection;
 import java.awt.Color;
 import java.sql.*;
 import java.util.logging.Level;
@@ -47,6 +48,8 @@ public class Menu extends javax.swing.JFrame {
         jLabel12 = new javax.swing.JLabel();
         jPanelProducts = new javax.swing.JPanel();
         jLabel8 = new javax.swing.JLabel();
+        jPanelBills = new javax.swing.JPanel();
+        jLabel10 = new javax.swing.JLabel();
         jPanel6 = new javax.swing.JPanel();
         jLabel4 = new javax.swing.JLabel();
         jLabel7 = new javax.swing.JLabel();
@@ -55,6 +58,7 @@ public class Menu extends javax.swing.JFrame {
         jLabel9 = new javax.swing.JLabel();
         jScrollPane1 = new javax.swing.JScrollPane();
         jTableUser = new javax.swing.JTable();
+        jPanel9 = new javax.swing.JPanel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         setMinimumSize(new java.awt.Dimension(1200, 0));
@@ -282,6 +286,32 @@ public class Menu extends javax.swing.JFrame {
 
         jPanel3.add(jPanelProducts, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 230, 300, 50));
 
+        jPanelBills.setBackground(new java.awt.Color(51, 51, 60));
+
+        jLabel10.setFont(new java.awt.Font("Segoe UI Historic", 1, 16)); // NOI18N
+        jLabel10.setForeground(new java.awt.Color(255, 255, 255));
+        jLabel10.setIcon(new javax.swing.ImageIcon(getClass().getResource("/icons/employee (1).png"))); // NOI18N
+        jLabel10.setText("      Bills");
+
+        javax.swing.GroupLayout jPanelBillsLayout = new javax.swing.GroupLayout(jPanelBills);
+        jPanelBills.setLayout(jPanelBillsLayout);
+        jPanelBillsLayout.setHorizontalGroup(
+            jPanelBillsLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(jPanelBillsLayout.createSequentialGroup()
+                .addGap(59, 59, 59)
+                .addComponent(jLabel10, javax.swing.GroupLayout.PREFERRED_SIZE, 150, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addContainerGap(91, Short.MAX_VALUE))
+        );
+        jPanelBillsLayout.setVerticalGroup(
+            jPanelBillsLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(jPanelBillsLayout.createSequentialGroup()
+                .addContainerGap()
+                .addComponent(jLabel10)
+                .addContainerGap(12, Short.MAX_VALUE))
+        );
+
+        jPanel3.add(jPanelBills, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 300, 300, 50));
+
         getContentPane().add(jPanel3);
         jPanel3.setBounds(0, 87, 300, 830);
 
@@ -352,7 +382,6 @@ public class Menu extends javax.swing.JFrame {
         jTableUser.setFocusable(false);
         jTableUser.setGridColor(new java.awt.Color(153, 153, 153));
         jTableUser.setShowGrid(true);
-        jTableUser.setShowVerticalLines(true);
         jScrollPane1.setViewportView(jTableUser);
 
         jPanel7.add(jScrollPane1);
@@ -360,6 +389,10 @@ public class Menu extends javax.swing.JFrame {
 
         getContentPane().add(jPanel7);
         jPanel7.setBounds(300, 90, 900, 710);
+
+        jPanel9.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
+        getContentPane().add(jPanel9);
+        jPanel9.setBounds(300, 90, 900, 710);
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
@@ -460,7 +493,7 @@ public class Menu extends javax.swing.JFrame {
     Statement st;
     try {
         st = con.createStatement();
-        String sql = "select * from account";
+        String sql = "select * from `account`";
         ResultSet rs = st.executeQuery(sql);
         while(rs.next()){
             String id = String.valueOf(rs.getInt("id"));
@@ -553,6 +586,7 @@ public class Menu extends javax.swing.JFrame {
     
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JLabel jLabel1;
+    private javax.swing.JLabel jLabel10;
     private javax.swing.JLabel jLabel12;
     private javax.swing.JLabel jLabel2;
     private javax.swing.JLabel jLabel3;
@@ -568,6 +602,8 @@ public class Menu extends javax.swing.JFrame {
     private javax.swing.JPanel jPanel6;
     private javax.swing.JPanel jPanel7;
     private javax.swing.JPanel jPanel8;
+    private javax.swing.JPanel jPanel9;
+    private javax.swing.JPanel jPanelBills;
     private javax.swing.JPanel jPanelCustomers;
     private javax.swing.JPanel jPanelEmployee;
     private javax.swing.JPanel jPanelLogout;
