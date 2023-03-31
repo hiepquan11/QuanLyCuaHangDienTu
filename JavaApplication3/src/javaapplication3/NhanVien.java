@@ -13,7 +13,7 @@ import java.awt.Color;
 public class NhanVien extends javax.swing.JFrame {
 
     /**
-     * Creates new form NhanVien
+     * Creates new form MenuEmloyee
      */
     public NhanVien() {
         initComponents();
@@ -62,6 +62,13 @@ public class NhanVien extends javax.swing.JFrame {
         jLabel15 = new javax.swing.JLabel();
         jTextField5 = new javax.swing.JTextField();
         jTextField2 = new javax.swing.JTextField();
+        jScrollPane1 = new javax.swing.JScrollPane();
+        jTable1 = new javax.swing.JTable();
+        jButton1 = new javax.swing.JButton();
+        jButton2 = new javax.swing.JButton();
+        jButton3 = new javax.swing.JButton();
+        jButton4 = new javax.swing.JButton();
+        jButton5 = new javax.swing.JButton();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         setMinimumSize(new java.awt.Dimension(1200, 0));
@@ -316,7 +323,7 @@ public class NhanVien extends javax.swing.JFrame {
         jPanel3.add(jPanelBills, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 310, 300, 50));
 
         getContentPane().add(jPanel3);
-        jPanel3.setBounds(0, 87, 300, 880);
+        jPanel3.setBounds(0, 87, 300, 830);
 
         jPanel6.setBackground(new java.awt.Color(255, 255, 255));
 
@@ -331,14 +338,14 @@ public class NhanVien extends javax.swing.JFrame {
 
         jLabel7.setFont(new java.awt.Font("Segoe UI", 0, 18)); // NOI18N
         jLabel7.setIcon(new javax.swing.ImageIcon(getClass().getResource("/adminIcon/person.png"))); // NOI18N
-        jLabel7.setText("Employee");
+        jLabel7.setText("Admin");
 
         javax.swing.GroupLayout jPanel6Layout = new javax.swing.GroupLayout(jPanel6);
         jPanel6.setLayout(jPanel6Layout);
         jPanel6Layout.setHorizontalGroup(
             jPanel6Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel6Layout.createSequentialGroup()
-                .addContainerGap(720, Short.MAX_VALUE)
+                .addContainerGap(746, Short.MAX_VALUE)
                 .addComponent(jLabel7)
                 .addGap(40, 40, 40)
                 .addComponent(jLabel4, javax.swing.GroupLayout.PREFERRED_SIZE, 20, javax.swing.GroupLayout.PREFERRED_SIZE)
@@ -363,44 +370,44 @@ public class NhanVien extends javax.swing.JFrame {
 
         jLabel9.setFont(new java.awt.Font("Times New Roman", 0, 24)); // NOI18N
         jLabel9.setText("Update Employees");
-        jPanel8.add(jLabel9, new org.netbeans.lib.awtextra.AbsoluteConstraints(310, 30, -1, -1));
+        jPanel8.add(jLabel9, new org.netbeans.lib.awtextra.AbsoluteConstraints(310, 10, -1, -1));
 
         jLabel14.setFont(new java.awt.Font("Times New Roman", 0, 18)); // NOI18N
         jLabel14.setText("Name");
-        jPanel8.add(jLabel14, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 141, -1, 30));
+        jPanel8.add(jLabel14, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 60, -1, 30));
 
         jTextField3.setFont(new java.awt.Font("Times New Roman", 0, 18)); // NOI18N
-        jPanel8.add(jTextField3, new org.netbeans.lib.awtextra.AbsoluteConstraints(80, 140, 200, 30));
+        jPanel8.add(jTextField3, new org.netbeans.lib.awtextra.AbsoluteConstraints(80, 60, 200, 30));
 
         jLabel11.setFont(new java.awt.Font("Times New Roman", 0, 18)); // NOI18N
         jLabel11.setText("ID");
-        jPanel8.add(jLabel11, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 190, -1, 30));
+        jPanel8.add(jLabel11, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 110, -1, 30));
 
         jTextField1.setFont(new java.awt.Font("Times New Roman", 0, 18)); // NOI18N
-        jPanel8.add(jTextField1, new org.netbeans.lib.awtextra.AbsoluteConstraints(80, 190, 200, -1));
+        jPanel8.add(jTextField1, new org.netbeans.lib.awtextra.AbsoluteConstraints(80, 110, 200, -1));
 
         jLabel16.setFont(new java.awt.Font("Times New Roman", 0, 18)); // NOI18N
         jLabel16.setText("BirthDay");
-        jPanel8.add(jLabel16, new org.netbeans.lib.awtextra.AbsoluteConstraints(320, 140, -1, 30));
+        jPanel8.add(jLabel16, new org.netbeans.lib.awtextra.AbsoluteConstraints(320, 60, -1, 30));
 
         jTextField4.setFont(new java.awt.Font("Times New Roman", 0, 18)); // NOI18N
-        jPanel8.add(jTextField4, new org.netbeans.lib.awtextra.AbsoluteConstraints(400, 140, 200, 30));
+        jPanel8.add(jTextField4, new org.netbeans.lib.awtextra.AbsoluteConstraints(400, 60, 200, 30));
 
         jLabel13.setFont(new java.awt.Font("Times New Roman", 0, 18)); // NOI18N
         jLabel13.setText("Gender");
-        jPanel8.add(jLabel13, new org.netbeans.lib.awtextra.AbsoluteConstraints(320, 191, 60, 30));
+        jPanel8.add(jLabel13, new org.netbeans.lib.awtextra.AbsoluteConstraints(320, 110, 60, 30));
 
         jComboBox1.setFont(new java.awt.Font("Times New Roman", 0, 18)); // NOI18N
         jComboBox1.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Men", "Women" }));
-        jPanel8.add(jComboBox1, new org.netbeans.lib.awtextra.AbsoluteConstraints(400, 190, -1, -1));
+        jPanel8.add(jComboBox1, new org.netbeans.lib.awtextra.AbsoluteConstraints(400, 110, -1, -1));
 
         jLabel17.setFont(new java.awt.Font("Times New Roman", 0, 18)); // NOI18N
         jLabel17.setText("HomeTown");
-        jPanel8.add(jLabel17, new org.netbeans.lib.awtextra.AbsoluteConstraints(640, 141, -1, 30));
+        jPanel8.add(jLabel17, new org.netbeans.lib.awtextra.AbsoluteConstraints(630, 60, -1, 30));
 
         jLabel15.setFont(new java.awt.Font("Times New Roman", 0, 18)); // NOI18N
         jLabel15.setText("Phone");
-        jPanel8.add(jLabel15, new org.netbeans.lib.awtextra.AbsoluteConstraints(640, 191, -1, 30));
+        jPanel8.add(jLabel15, new org.netbeans.lib.awtextra.AbsoluteConstraints(640, 110, -1, 30));
 
         jTextField5.setFont(new java.awt.Font("Times New Roman", 0, 18)); // NOI18N
         jTextField5.addActionListener(new java.awt.event.ActionListener() {
@@ -408,15 +415,75 @@ public class NhanVien extends javax.swing.JFrame {
                 jTextField5ActionPerformed(evt);
             }
         });
-        jPanel8.add(jTextField5, new org.netbeans.lib.awtextra.AbsoluteConstraints(730, 140, 160, -1));
+        jPanel8.add(jTextField5, new org.netbeans.lib.awtextra.AbsoluteConstraints(730, 60, 160, -1));
 
         jTextField2.setFont(new java.awt.Font("Times New Roman", 0, 18)); // NOI18N
-        jPanel8.add(jTextField2, new org.netbeans.lib.awtextra.AbsoluteConstraints(730, 190, 160, -1));
+        jPanel8.add(jTextField2, new org.netbeans.lib.awtextra.AbsoluteConstraints(730, 110, 160, -1));
 
         jPanel7.add(jPanel8, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, -1, -1));
 
+        jTable1.setModel(new javax.swing.table.DefaultTableModel(
+            new Object [][] {
+                {null, null, null, null, null, null},
+                {null, null, null, null, null, null},
+                {null, null, null, null, null, null},
+                {null, null, null, null, null, null}
+            },
+            new String [] {
+                "ID", "Name", "Birthday", "Gender", "HomeTown", "Phone"
+            }
+        ));
+        jTable1.setFocusCycleRoot(true);
+        jTable1.setFocusable(false);
+        jTable1.setGridColor(new java.awt.Color(153, 153, 153));
+        jTable1.setPreferredSize(new java.awt.Dimension(450, 0));
+        jTable1.setShowGrid(true);
+        jScrollPane1.setViewportView(jTable1);
+
+        jPanel7.add(jScrollPane1, new org.netbeans.lib.awtextra.AbsoluteConstraints(100, 240, 690, -1));
+
+        jButton1.setText("REFERESH");
+        jButton1.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButton1ActionPerformed(evt);
+            }
+        });
+        jPanel7.add(jButton1, new org.netbeans.lib.awtextra.AbsoluteConstraints(690, 170, 100, 40));
+
+        jButton2.setText("ADD");
+        jButton2.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButton2ActionPerformed(evt);
+            }
+        });
+        jPanel7.add(jButton2, new org.netbeans.lib.awtextra.AbsoluteConstraints(100, 170, 100, 40));
+
+        jButton3.setText("DELETE");
+        jButton3.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButton3ActionPerformed(evt);
+            }
+        });
+        jPanel7.add(jButton3, new org.netbeans.lib.awtextra.AbsoluteConstraints(240, 170, 100, 40));
+
+        jButton4.setText("FIX");
+        jButton4.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButton4ActionPerformed(evt);
+            }
+        });
+        jPanel7.add(jButton4, new org.netbeans.lib.awtextra.AbsoluteConstraints(390, 170, 100, 40));
+
+        jButton5.setText("SAVAE");
+        jButton5.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButton5ActionPerformed(evt);
+            }
+        });
+        jPanel7.add(jButton5, new org.netbeans.lib.awtextra.AbsoluteConstraints(550, 170, 100, 40));
+
         getContentPane().add(jPanel7);
-        jPanel7.setBounds(300, 90, 920, 870);
+        jPanel7.setBounds(300, 90, 900, 790);
 
         pack();
         setLocationRelativeTo(null);
@@ -424,6 +491,7 @@ public class NhanVien extends javax.swing.JFrame {
 
     private void jPanel1MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jPanel1MouseClicked
         // TODO add your handling code here:
+
     }//GEN-LAST:event_jPanel1MouseClicked
 
     private void jPanelLogoutMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jPanelLogoutMouseClicked
@@ -496,6 +564,7 @@ public class NhanVien extends javax.swing.JFrame {
     private void jPanelProductsMouseEntered(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jPanelProductsMouseEntered
         // TODO add your handling code here:
         jPanelProducts.setBackground(new Color(0,0,0));
+
     }//GEN-LAST:event_jPanelProductsMouseEntered
 
     private void jPanelProductsMouseExited(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jPanelProductsMouseExited
@@ -511,6 +580,26 @@ public class NhanVien extends javax.swing.JFrame {
     private void jTextField5ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jTextField5ActionPerformed
         // TODO add your handling code here:
     }//GEN-LAST:event_jTextField5ActionPerformed
+
+    private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_jButton1ActionPerformed
+
+    private void jButton2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton2ActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_jButton2ActionPerformed
+
+    private void jButton3ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton3ActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_jButton3ActionPerformed
+
+    private void jButton4ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton4ActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_jButton4ActionPerformed
+
+    private void jButton5ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton5ActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_jButton5ActionPerformed
 
     /**
      * @param args the command line arguments
@@ -538,6 +627,7 @@ public class NhanVien extends javax.swing.JFrame {
             java.util.logging.Logger.getLogger(NhanVien.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         }
         //</editor-fold>
+        //</editor-fold>
 
         /* Create and display the form */
         java.awt.EventQueue.invokeLater(new Runnable() {
@@ -548,6 +638,11 @@ public class NhanVien extends javax.swing.JFrame {
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
+    private javax.swing.JButton jButton1;
+    private javax.swing.JButton jButton2;
+    private javax.swing.JButton jButton3;
+    private javax.swing.JButton jButton4;
+    private javax.swing.JButton jButton5;
     private javax.swing.JComboBox<String> jComboBox1;
     private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel10;
@@ -577,6 +672,8 @@ public class NhanVien extends javax.swing.JFrame {
     private javax.swing.JPanel jPanelEmployee;
     private javax.swing.JPanel jPanelLogout;
     private javax.swing.JPanel jPanelProducts;
+    private javax.swing.JScrollPane jScrollPane1;
+    private javax.swing.JTable jTable1;
     private javax.swing.JTextField jTextField1;
     private javax.swing.JTextField jTextField2;
     private javax.swing.JTextField jTextField3;
